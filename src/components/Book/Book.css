@@ -1,0 +1,13 @@
+.card{
+    background-image: linear-gradient(40deg, white, rgb(124, 251, 255));
+}
+.fas-icon{
+    color: tomato;
+}
+.far-icon{
+    color: rgb(53, 3, 44);
+}
+.card-img-top{
+    height:315px;
+    padding: 50PX;
+}
