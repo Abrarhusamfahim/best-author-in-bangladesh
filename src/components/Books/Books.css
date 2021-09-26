@@ -6,6 +6,8 @@
     margin-top: 17px;
     padding: 25px;
     margin-left: 30px;
+    overflow-y: scroll;
+    background-color: #edffe1;
 }
 .row{
    margin-left: 20px;
@@ -14,4 +16,14 @@
 .input-container{
     background-color: #e3f2fd;
     padding: 15px;
+}
+.teal{
+    color: teal;
+}
+.count{
+    color: rgb(197, 13, 28);
+}
+.btn{
+   background-color: teal;
+   color: white;
 }

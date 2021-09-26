@@ -17,8 +17,8 @@ const Books = () => {
     return (
         <div>
             <div className="input-container">
-            <div class="input-group mb-3 w-75 mx-auto">
-                    <input type="text" class="form-control text-center" placeholder="Search your favourite Athour name" aria-label="Search your favourite Athour name"/>
+            <div className="mx-auto mb-3 input-group w-75">
+                    <input type="text" className="text-center form-control" placeholder="Search your favourite Athour name" aria-label="Search your favourite Athour name"/>
                     
                 </div>
             </div>
@@ -29,8 +29,8 @@ const Books = () => {
                    }
                    </div>
               
-               <div class="col-3" className="cart-container">
-                   <Cart cart={cart}></Cart>
+               <div className="col-3 cart-container">
+               <Cart cart={cart}></Cart>
                </div>
            </div>
         </div>

@@ -34,6 +34,7 @@ const books = [
     {
         name: "K Anis Ahmed",
         book: "the world in my hands",
+        image: "https://www.worldliteraturetoday.org/sites/default/files/blog/road/k-anis-ahmed-006.jpg",
         first_publisher: "september 18, 2017",
         rating: 3,
         salary: 52000
@@ -57,7 +58,7 @@ const books = [
     {
         name: "Mahmud Rahman",
         book: "killing the water",
-        image: "https://www.google.com/search?q=Mahmud+Rahman&rlz=1C1CHBF_enBD970BD970&hl=bn&sxsrf=AOaemvLEpluYLDfLlUPBAE58wE4GK5F9aw:1632597474407&source=lnms&tbm=isch&sa=X&ved=2ahUKEwils5fE65rzAhUW9XMBHZQGCa4Q_AUoAnoECAEQBA&biw=1536&bih=722&dpr=1.25#imgrc=9Ab9gV2nA85W7M",
+        image: "https://images.gr-assets.com/authors/1333844259p8/3388128.jpg",
         first_publisher: "march 6, 2019",
         rating: 4,
         salary: 40000
@@ -93,6 +94,46 @@ const books = [
         first_publisher: "april 1, 2011",
         rating: 4,
         salary: 60000
+    },
+    {
+        name: "Abdul Hakim",
+        book: "dorabaz spay",
+        image: "https://www.newagebd.com/files/records/news/202108/147543_190.jpg",
+        first_publisher: "march 6, 2001",
+        rating: 3,
+        salary: 66000
+    },
+    {
+        name: "Abul Mansur Ahmad",
+        book: "ābula manasura",
+        image: "https://upload.wikimedia.org/wikipedia/en/f/f8/AbulMansurAhmedPic.jpg",
+        first_publisher: "july 23, 1999",
+        rating: 4,
+        salary: 54000
+    },
+    {
+        name: "আবু রুশদ",
+        book: "stories of abu rushd",
+        image: "https://www.daily-sun.com/assets/news_images/2019/12/26/Daily-Sun_2019-12-26-45.jpg",
+        first_publisher: "september 10, 2001",
+        rating: 3,
+        salary: 74000
+    },
+    {
+        name: "Hasan Azizul Huq",
+        book: "Agun pakhi",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Hasan_Azizul_Huq.jpg",
+        first_publisher: "january, 2003",
+        rating: 4,
+        salary: 64000
+    },
+    {
+        name: "Imdadul Haq Milan",
+        book: "Anayamana",
+        image: "https://images.gr-assets.com/authors/1368428580p8/7031014.jpg",
+        first_publisher: "july 5, 2015",
+        rating: 2,
+        salary: 34000
     },
     {
         name: "Rudra Mohammad Shahidullah",

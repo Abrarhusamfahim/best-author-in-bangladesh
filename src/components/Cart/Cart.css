@@ -7,3 +7,9 @@
 .cart-length{
     color: rgb(197, 13, 28);
 }
+.show-name{
+    margin-left: 10px;
+}
+.total{
+    color: teal;
+}

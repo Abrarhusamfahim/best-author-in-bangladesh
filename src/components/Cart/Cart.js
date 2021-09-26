@@ -9,17 +9,26 @@ const Cart = (props) => {
     for(const book of cart){
        total = total + book.salary;
     }
-    let name = ' ';
-    for(const book of cart){
-        name = name + book.name;
-    }
+    // let name = ' ';
+    // for(const book of cart){
+    //     name = name + book.name;
+
+    // }
+    
     return (
         <div className="cart-gap">
             <h2><span className="user">{user}</span> : <span className="cart-length">{props.cart.length}</span></h2>
-            <h3>Total Salary: ${total.toFixed(2)}</h3>
-            <p>name: {name}</p>
             <hr />
-            <button type="button" class="btn btn-outline-dark">Buy Book</button>
+            <h3><span className="total">Total Salary</span> : <span className="cart-length">${total.toFixed(2)}</span></h3>
+            
+            <ul>
+                {
+                    cart.map(item => <li key={item.name}>{item.name}</li>)
+                }
+            </ul>
+            {/* <p className="show-name">name:</p> */}
+            <hr />
+            <button type="button" className="btn btn-outline-dark">Buy Book</button>
         </div>
     );
 };
