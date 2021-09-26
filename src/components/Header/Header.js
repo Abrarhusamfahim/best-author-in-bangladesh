@@ -22,13 +22,13 @@ const Header = () => {
                     <a className="nav-link active" aria-current="page" href="home">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="about">About</a>
+                    <a className="nav-link" href="Review">Order Review</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="service">Service</a>
+                    <a className="nav-link" href="Features">Features</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="contact">Contact</a>
+                    <a className="nav-link" href="About Us">About Us</a>
                     </li>
                 </ul>
                 <form className="d-flex">
