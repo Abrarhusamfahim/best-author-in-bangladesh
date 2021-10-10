@@ -4,8 +4,16 @@ import logo from '../../favicon.png'
 import book from '../../book.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons'
+import { useHistory } from 'react-router';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 const element = <FontAwesomeIcon icon={faSignInAlt} />
 const Header = () => {
+    const {user, logoutHandler} = useAuth()
+    const history = useHistory()
+    const loginHandler = ()=>{
+        history.push('/login')
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#e3f2fd"}}>
@@ -22,17 +30,20 @@ const Header = () => {
                     <a className="nav-link active" aria-current="page" href="home">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="Review">Order Review</a>
+                    <NavLink className="nav-link" to="order">Order Review</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="Features">Features</a>
+                    <NavLink className="nav-link" to="features">Features</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="About Us">About Us</a>
+                    <NavLink className="nav-link" to="about">About Us</NavLink>
                     </li>
                 </ul>
                 <form className="d-flex">
-                    <button className="btn btn-info" type="submit">{element} Login</button>
+                    {user.email?
+                    <button onClick={logoutHandler} className="btn btn-info" type="submit"><span className="text-danger">{element}</span> Logout</button>
+                    :
+                    <button onClick={loginHandler} className="btn btn-info" type="submit">{element} Login</button>}
                 </form>
                 </div>
             </div>
