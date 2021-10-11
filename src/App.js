@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 import OrderReview from './components/Order-Review/OrderReview';
 import About from './components/About/About';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './components/PrivateRouter/PrivateRoute';
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/order">
+          <PrivateRoute path="/order">
            <OrderReview></OrderReview>
-          </Route>
+          </PrivateRoute>
           <Route path="/about">
            <About></About>
           </Route>

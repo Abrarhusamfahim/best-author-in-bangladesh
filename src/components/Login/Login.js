@@ -2,10 +2,20 @@ import React from 'react';
 import './Login.css'
 import { FaFacebook, FaTwitter} from 'react-icons/fa';
 import { FcGoogle, } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 const Login = () => {
     const {googleLogin} = useAuth()
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_url = location.state?.from || '/home'
+    const googleStateLocation = ()=>{
+        googleLogin()
+        .then(result => {
+            history.push(redirect_url)
+        })
+       
+    }
     return (
         <div className="body">
             <div className="container">
@@ -27,7 +37,7 @@ const Login = () => {
                                 <label className="form-check-label">Remember Me</label>
                             </div>
                             <div className="gap-2 mb-3 d-grid">
-                                <button onClick={googleLogin} type="button" className="border-0 btn btn-dark btn-lg rounded-0">Login</button>
+                                <button onClick={googleStateLocation} type="button" className="border-0 btn btn-dark btn-lg rounded-0">Login</button>
                             </div>
                             <div className="mb-3 text-right forgot-password-link">
                                 <Link to="/register">Forgot Password</Link>
@@ -36,8 +46,8 @@ const Login = () => {
                                 <p className="text-center">Or Sign Up</p>
                                 <div className="gap-3 social-accounts d-flex justify-content-center d-grid fs-1">
                                     <Link onClick={""}><FaFacebook/></Link>
-                                    <Link to="/register"><FaTwitter/></Link>
-                                    <Link to="/login" onClick={googleLogin}><FcGoogle/></Link>
+                                    <Link to=""><FaTwitter/></Link>
+                                    <Link to="/login" onClick={googleStateLocation}><FcGoogle/></Link>
                                 </div>
                             </div>
                         </form>

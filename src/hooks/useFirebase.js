@@ -9,9 +9,8 @@ const useFirebase = () => {
     const [user, setUser] = useState({})
     const [error, setError] = useState("")
     const googleLogin =()=>{
-        signInWithPopup(auth, googleProvider)
-        .then(result => setUser(result.user))
-        .catch(error => setError(error.message))
+      return  signInWithPopup(auth, googleProvider)
+        
     }
     //sign out
     const logoutHandler = ()=>{
